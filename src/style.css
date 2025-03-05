@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  aspect-ratio: 1 /1;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+.circle {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: scale(0);
+  transition: transform 1s ease-out;
+}

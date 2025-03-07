@@ -15,11 +15,3 @@ button {
   position: relative;
   z-index: 1;
 }
-
-.circle {
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: scale(0);
-  transition: transform 1s ease-out;
-}

@@ -5,5 +5,4 @@ export const state = {
     button: null as HTMLButtonElement | null,
     newColor: '' as string,
     circle: null as HTMLElement | null,
-    timeoutId: 0 as number,
 };

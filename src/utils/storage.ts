@@ -1,6 +1,6 @@
 import { state } from '../state.js';
 
-export const loadThemeFromStorage = (): void => {
+export const loadThemeFromStorage: () => void = (): void => {
     const savedTheme: string | null = localStorage.getItem('currentTheme');
     const savedIsDark: string | null = localStorage.getItem('isDark');
 
@@ -13,7 +13,7 @@ export const loadThemeFromStorage = (): void => {
     state.isDark = savedIsDark === 'true';
 };
 
-export const saveThemeToStorage = (): void => {
+export const saveThemeToStorage: () => void = (): void => {
     localStorage.setItem('currentTheme', state.newColor);
     localStorage.setItem('isDark', String(state.isDark));
 };

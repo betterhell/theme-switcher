@@ -17,7 +17,7 @@ const changeBackground = (): void => {
     saveThemeToStorage();
 };
 
-export const themeSwitch = (): void => {
+export const themeSwitch: () => void = (): void => {
     state.button = document.querySelector('.themeButton') as HTMLButtonElement;
 
     if (!state.button) {
@@ -26,8 +26,6 @@ export const themeSwitch = (): void => {
     }
 
     state.button.addEventListener('click', throttle((): void => {
-        clearTimeout(state.timeoutId);
-
         const rect: Rect = state.button!.getBoundingClientRect();
 
         checkButtonAttributeColor();
@@ -52,8 +50,5 @@ export const themeSwitch = (): void => {
 
 document.addEventListener('DOMContentLoaded', (): void => {
     loadThemeFromStorage();
-
-    state.timeoutId = setTimeout(() => {
-        themeSwitch();
-    }, 1000);
+    themeSwitch();
 });

@@ -1,10 +1,10 @@
 export const throttle = (mainFunction: any, delay: number) => {
     let timerFlag: number | null = null;
 
-    return (...args: any[]) => {
+    return (...args: any[]): void => {
         if (timerFlag === null) {
             mainFunction(...args);
-            timerFlag = setTimeout(() => {
+            timerFlag = setTimeout((): void => {
                 timerFlag = null;
             }, delay);
         }

@@ -17,7 +17,7 @@ const changeBackground = (): void => {
     saveThemeToStorage();
 };
 
-export const themeSwitch = (): void => {
+export const themeSwitch: () => void = (): void => {
     state.button = document.querySelector('.themeButton') as HTMLButtonElement;
 
     if (!state.button) {

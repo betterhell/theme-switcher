@@ -25,7 +25,16 @@ export const createCircle: (rect: Rect) => void = (rect: Rect): void => {
 };
 
 export const circlePropagation: () => void = (): void => {
-    if (state.circle) {
+    const speedThemeAttr = state.button!.getAttribute('aria-speed-theme') as string | null;
+
+    if (speedThemeAttr && state.circle) {
+        if (Number(speedThemeAttr) <= 5 &&
+            Number(speedThemeAttr) > 0) {
+            state.circle.style.transform = `scale(${speedThemeAttr})`;
+        }
+    }
+
+    if (!speedThemeAttr && state.circle) {
         state.circle.style.transform = 'scale(2)';
     }
 };

@@ -1,4 +1,6 @@
-export const state = {
+import {StateProps} from "./models/state.ts";
+
+export const state: StateProps = {
     initialBackground: document.body.style.backgroundColor || '#ffffff',
     darkTheme: '' as string,
     isDark: false,

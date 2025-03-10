@@ -21,7 +21,7 @@ export const themeSwitch: () => void = (): void => {
     state.button = document.querySelector('.themeButton') as HTMLButtonElement;
 
     if (!state.button) {
-        console.error("Add class '.themeButton' to the button");
+        console.error("Add class \'.themeButton\' to the button");
         return;
     }
 

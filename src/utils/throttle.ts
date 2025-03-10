@@ -4,7 +4,7 @@ export const throttle = (mainFunction: any, delay: number) => {
     return (...args: any[]): void => {
         if (timerFlag === null) {
             mainFunction(...args);
-            timerFlag = setTimeout((): void => {
+            timerFlag = window.setTimeout((): void => {
                 timerFlag = null;
             }, delay);
         }

@@ -7,19 +7,19 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "jest"
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.26.0",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
   },
-  "description": "little lib for toggle background",
+  "description": "little lib for toggle background. Just install and fun!",
   "main": "dist/index.js",
   "keywords": [
     "theme",
     "switcher",
-    "theme-switcher"
+    "theme-switcher",
+    "switch theme"
   ],
   "author": "betterhell",
   "license": "ISC"
